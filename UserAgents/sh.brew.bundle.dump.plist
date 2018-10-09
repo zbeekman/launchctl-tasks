@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>brew.bundle.dump</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/brew</string>
+		<string>bundle</string>
+		<string>dump</string>
+		<string>--global</string>
+		<string>--force</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/brew-bundle-dump.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/brew-bundle-dump.out</string>
+	<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<key>Hour</key>
+			<integer>3</integer>
+			<key>Minute</key>
+			<integer>20</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
