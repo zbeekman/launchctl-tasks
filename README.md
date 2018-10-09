@@ -33,7 +33,9 @@ __[User Agents]__
   you to update them when you log in
 * [sh.brew.bundle.dump]: Ensure you have an up-to-date `.Brewfile` in your home directory. This way, a
   manifest of installed software will always be up-to-date and make it into your TimeMachine backups should
-  you need to restore your machine and re-provision it.
+  you need to restore your machine and re-provision it
+* [sh.brew.fetch-outdated]: Download bottles (binary distributions) for outdated homebrew software in the
+  background, so that it is ready to install and will skip the download step when `brew upgrade` is run
 
 [`brew bundle`]: https://github.com/Homebrew/homebrew-bundle
 [LaunchControl App]: http://www.soma-zone.com/LaunchControl/
@@ -43,3 +45,4 @@ __[User Agents]__
 [sh.brew.cask.outdated]: ./UserAgents/sh.brew.cask.outdated
 [com.github.mas-cli.mas]: ./UserAgents/com.github.mas-cli.mas.plist
 [sh.brew.bundle.dump]: ./UserAgents/sh.brew.bundle.dump.plist
+[sh.brew.fetch-outdated]: ./UserAgents/sh.brew.fetch-outdated.plists

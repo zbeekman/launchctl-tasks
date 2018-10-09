@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>sh.brew.fetch-outdated</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>-c</string>
+		<string>/usr/local/bin/brew outdated || /usr/local/bin/brew fetch --force-bottle $(/usr/local/bin/brew outdated | /usr/bin/cut -d ' ' -f 1)</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/brewfetchoutdated.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/brew.fetch-outdated</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Minute</key>
+		<integer>20</integer>
+	</dict>
+</dict>
+</plist>
